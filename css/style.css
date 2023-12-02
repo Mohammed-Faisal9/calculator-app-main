@@ -1,0 +1,245 @@
+/* custom properties */
+:root {
+    --font-family: 'League Spartan', sans-serif;
+}
+
+/* global rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    border: 0;
+}
+
+/* general style */
+body {
+    /* (key shadow) */
+    --primary-clr-100 : hsl(224, 28%, 35%);
+    /* (key background) */
+    --primary-clr-300: hsl(225, 21%, 49%);
+    
+    /* (main background) */
+    --primary-clr-500 : hsl(222, 26%, 31%);
+    /* (toggle background, keypad background) */
+    --primary-clr-600 : hsl(223, 31%, 20%);
+    --primary-clr-700: hsl(224, 36%, 15%);
+
+    /* (key background, toggle) */
+    --accent-clr-100 : hsl(6, 63%, 50%);
+    /* (key shadow) */
+    --accent-clr-300 : hsl(6, 70%, 34%);
+
+    /* (key shadow) */
+    --accent-clr-400 : hsl(28, 16%, 65%);
+    /* (key background) */
+    --accent-clr-600 : hsl(30, 25%, 89%);
+
+    /* White (text) */
+    --neturial-clr-100: hsl(0, 0%, 100%);
+    
+    --neturial-clr-300: hsl(221, 14%, 31%);
+
+    --neturial-clr-400: hsl(198, 20%, 13%);
+
+
+
+    background-color: var(--primary-clr-500);
+    font-family: var(--font-family);
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+.light {
+    /* (key shadow) */
+    --primary-clr-100 : hsl(185, 58%, 25%);
+    /* (key background) */
+    --primary-clr-300: hsl(185, 42%, 37%);
+
+    /* (main background) */
+    --primary-clr-500 : hsl(0, 0%, 90%);
+    /* (toggle background, keypad background) */
+    --primary-clr-600 : hsl(0, 5%, 81%);
+
+    /* (key background, toggle) */
+    --accent-clr-100 : hsl(25, 98%, 40%);
+    /* (key shadow) */
+    --accent-clr-300 : hsl(25, 99%, 27%);
+
+    /* (key shadow) */
+    --accent-clr-400 : hsl(35, 11%, 61%);
+    /* (key background) */
+    --accent-clr-600 : hsl(45, 7%, 89%);
+
+    /* White (text) */
+    --neturial-clr-100: hsl(0, 0%, 100%);
+
+    --neturial-clr-300: hsl(60, 10%, 19%);
+
+    --neturial-clr-400: hsl(198, 20%, 13%);
+}
+
+.dark {
+    /* (key shadow) */
+    --primary-clr-100 : hsl(281, 89%, 26%);
+    /* (key background) */
+    --primary-clr-300: hsl(285, 91%, 52%);
+
+    /* (main background) */
+    --primary-clr-500 : hsl(268, 75%, 9%);
+    /* (toggle background, keypad background) */
+    --primary-clr-600 : hsl(268, 71%, 12%);
+
+    /* (key background, toggle) */
+    --accent-clr-100 : hsl(176, 100%, 44%);
+    /* (key shadow) */
+    --accent-clr-300 : hsl(177, 92%, 70%);
+
+    /* (key shadow) */
+    --accent-clr-400 : hsl(290, 70%, 36%);
+    /* (key background) */
+    --accent-clr-600 : hsl(268, 47%, 21%);
+
+    /* White (text) */
+    --neturial-clr-100: hsl(0, 0%, 100%);
+    
+    --neturial-clr-300: hsl(52, 100%, 62%);
+
+    --neturial-clr-400: hsl(198, 20%, 13%);
+}
+
+.container-wrapper {
+    max-width: 700px;
+    margin-inline: auto;
+}
+
+.head {
+    color: var(--neturial-clr-100);
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head h3 {
+    font-size: 32px;
+}
+
+.head > div {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.head .theme > span {
+    position: absolute;
+    top: -20px;
+}
+
+.theme-btn {
+    cursor: pointer;
+    position: relative;
+    width: 66px;
+    background-color: var(--primary-clr-600);
+    border-radius: 10px;
+    height: 22px;
+    display: flex;
+}
+
+.theme-btn span {
+    width: 22px;
+    height: 22px;
+    display: block;
+    border-radius: 50%;
+}
+
+.theme-btn span::before {
+    content: attr(data-number);
+    position: absolute;
+    top: -20px;
+}
+
+.theme-btn span:first-of-type {
+    
+    background-color: var(--accent-clr-100);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.theme-btn span:first-of-type::before {
+    left: 5px;
+}
+
+.theme-btn span:nth-of-type(2)::before {
+    left: 40%;
+}
+
+.theme-btn span:last-of-type::before {
+    left: 80%;
+}
+
+.output {
+    background-color: var(--primary-clr-600);
+    padding: 1rem;
+    text-align: right;
+    border-radius: 10px;
+    color: var(--neturial-clr-100);
+    min-height: 120px;
+}
+
+.previus-operand {
+    margin-bottom: 1rem;
+    font-size: 20px;
+}
+
+.current-operand {
+    font-size: 42px;
+    margin-right: 10px;
+}
+
+.calculator-buttons {
+    background-color: var(--primary-clr-600);
+    padding: 1rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    border-radius: 4px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.calculator-buttons button {
+    color: var(--neturial-clr-300);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: inherit;
+    min-width: 60px;
+    padding: 10px;
+    background-color: var(--accent-clr-600);
+    border-radius: 10px;
+    box-shadow: 0px 5px var(--accent-clr-400);
+}
+
+
+
+@media (min-width: 768px) {
+    .calculator-buttons button {
+        padding: 1rem 2rem
+
+    }
+}
+
+#delete, #reset {
+    color: var(--neturial-clr-100);
+    background-color: var(--primary-clr-100);
+    box-shadow: 0 4px var(--primary-clr-300);
+}

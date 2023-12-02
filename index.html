@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+
+  <!-- my css file -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- my js file -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="container-wrapper">
+    <div class="head">
+
+      <h3>calc</h3>
+
+      <div class="theme">
+        
+        <span>theme</span>
+        
+        <div class="theme-btn">
+          <div class="checked"></div>
+          <span data-theme="default" data-number="1"></span>
+          <span data-theme="light" data-number="2"></span>
+          <span data-theme="dark" data-number="3"></span>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="output">
+      <div class="previus-operand"></div>
+      <div class="current-operand"></div>
+    </div>
+
+    <div class="calculator-buttons">
+      <button id="number">7</button>
+      <button id="number">8</button>
+      <button id="number">9</button>
+      <button id="delete">Del</button>
+      <button id="number">4</button>
+      <button id="number">5</button>
+      <button id="number">6</button>
+      <button id="operand">+</button>
+      <button id="number">1</button>
+      <button id="number">2</button>
+      <button id="number">3</button>
+      <button id="operand">-</button>
+      <button id="number">.</button>
+      <button id="number">0</button>
+      <button id="operand">/</button>
+      <button id="operand">×</button>
+      <button class="span-two" id="reset">Reset</button>
+      <button id="equal" class="span-two">=</button>
+    </div>
+  </div>
+</body>
+</html>
